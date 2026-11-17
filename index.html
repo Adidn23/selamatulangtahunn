@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selamat Ulang Tahun, Ayah</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500;600&family=Pinyon+Script&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cf" aria-hidden="true"></canvas>
+<main id="m" class="locked">
+
+<section id="hero">
+  <h1 id="h1">Ayah, tiup lilinnya dulu.</h1>
+  <svg id="cake" viewBox="0 0 360 420" role="img" aria-label="Kue ulang tahun tiga tingkat dengan tiga lilin menyala">
+    <defs>
+      <radialGradient id="g"><stop offset="0" stop-color="#FFC857" stop-opacity=".85"/><stop offset="1" stop-color="#FFC857" stop-opacity="0"/></radialGradient>
+      <linearGradient id="gi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34468F"/><stop offset="1" stop-color="#1E2B5E"/></linearGradient>
+      <linearGradient id="gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F1E4CB"/></linearGradient>
+      <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0D27F"/><stop offset="1" stop-color="#B8892D"/></linearGradient>
+      <pattern id="sg" width="20" height="10" patternUnits="userSpaceOnUse"><circle cx="10" cy="0" r="10" fill="#C9962F"/></pattern>
+      <pattern id="si" width="20" height="10" patternUnits="userSpaceOnUse"><circle cx="10" cy="0" r="10" fill="#FFF6E5"/></pattern>
+      <pattern id="dg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 2L18 10L10 18L2 10Z" fill="none" stroke="#E2B84F" stroke-width="1.3"/><circle cx="10" cy="10" r="1.8" fill="#E2B84F"/></pattern>
+      <pattern id="di" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 2L18 10L10 18L2 10Z" fill="none" stroke="#1E2B5E" stroke-width="1.3"/><circle cx="10" cy="10" r="1.8" fill="#1E2B5E"/></pattern>
+      <pattern id="pr" width="20" height="10" patternUnits="userSpaceOnUse"><circle cx="10" cy="5" r="3.6" fill="#D6A63C"/></pattern>
+      <pattern id="cs" width="10" height="8" patternUnits="userSpaceOnUse"><rect width="10" height="4" fill="#FFF6E5"/><rect y="4" width="10" height="4" fill="#B8892D"/></pattern>
+    </defs>
+    <ellipse cx="180" cy="408" rx="150" ry="9" fill="#1E2B5E" opacity=".12"/>
+    <ellipse cx="180" cy="398" rx="62" ry="8" fill="url(#gg)"/>
+    <rect x="166" y="382" width="28" height="16" fill="url(#gg)"/>
+    <ellipse cx="180" cy="382" rx="168" ry="15" fill="url(#gg)"/>
+    <ellipse cx="180" cy="379" rx="154" ry="11" fill="#FFF6E5"/>
+    <rect x="40" y="300" width="280" height="78" rx="12" fill="url(#gi)"/>
+    <rect x="40" y="300" width="280" height="10" fill="url(#si)"/>
+    <rect x="40" y="320" width="280" height="20" fill="url(#dg)"/>
+    <rect x="40" y="352" width="280" height="10" fill="url(#pr)"/>
+    <rect x="80" y="230" width="200" height="74" rx="12" fill="url(#gv)" stroke="#E0C888" stroke-width="1.5"/>
+    <rect x="80" y="230" width="200" height="10" fill="url(#sg)"/>
+    <rect x="80" y="260" width="200" height="20" fill="url(#di)"/>
+    <rect x="80" y="288" width="200" height="10" fill="url(#pr)"/>
+    <rect x="120" y="170" width="120" height="64" rx="12" fill="url(#gv)" stroke="#E0C888" stroke-width="1.5"/>
+    <rect x="120" y="170" width="120" height="10" fill="url(#sg)"/>
+    <rect x="120" y="210" width="120" height="10" fill="url(#pr)"/>
+    <g id="cd"></g>
+    <path class="sp" d="M0-9Q1-1 9 0Q1 1 0 9Q-1 1-9 0Q-1-1 0-9z" transform="translate(44 150)" fill="#C9962F" style="animation-delay:-.4s"/>
+    <path class="sp" d="M0-9Q1-1 9 0Q1 1 0 9Q-1 1-9 0Q-1-1 0-9z" transform="translate(318 190) scale(1.2)" fill="#C9962F" style="animation-delay:-1.2s"/>
+    <path class="sp" d="M0-9Q1-1 9 0Q1 1 0 9Q-1 1-9 0Q-1-1 0-9z" transform="translate(300 70)" fill="#C9962F" style="animation-delay:-2s"/>
+  </svg>
+  <button class="btn" id="go" type="button">Tiup lewat mikrofon</button>
+  <button class="lnk" id="tap" type="button">Mikrofon tidak jalan? Ketuk lilinnya</button>
+  <p id="st" role="status" aria-live="polite"></p>
+</section>
+
+<section id="surat">
+  <h2>Surat untuk Ayah</h2>
+  <div id="letter"></div>
+</section>
+
+<section id="ajar">
+  <h2>Yang Ayah ajarkan</h2>
+  <ol id="tl"></ol>
+</section>
+
+<section id="kenang">
+  <h2>Kenangan Ayah</h2>
+  <div id="foto"></div>
+</section>
+
+<section id='hitung'>
+  <h2>Sejak aku lahir</h2>
+  <p class='lbl'>Sudah</p>
+  <div id='num' aria-live='polite'>0</div>
+  <p class='cap'>hari Ayah menjadi ayahku</p>
+  <p class='sub' id='sub'></p>
+</section>
+
+<section id="pesan">
+  <h2>Kata mereka tentang Ayah</h2>
+  <div id="msgs" tabindex="0" aria-label="Pesan dari keluarga"></div>
+  <p class="mut ui" style="font-size:.95rem">Geser untuk membaca semuanya</p>
+</section>
+
+<section id='amplop'>
+  <h2>Buka kalau...</h2>
+  <p class='sub'>Ketuk amplopnya, Ayah</p>
+  <div id='amp'></div>
+</section>
+
+<section id="hadiah">
+  <h2>Satu hadiah lagi</h2>
+  <button class="card" id="card" type="button" aria-pressed="false" aria-label="Buka kartu hadiah">
+    <div class="fc">
+      <div class="ff"><span id="front"></span></div>
+      <div class="fb"><h3 id="kt"></h3><p id="kk"></p></div>
+    </div>
+  </button>
+</section>
+
+<section id='balas'>
+  <h2>Balas untuk kami</h2>
+  <p class='sub'>Pilih kalimatnya, lalu kirim lewat WhatsApp</p>
+  <div id='chips'></div>
+  <a class='btn wa' id='wa' href='#' target='_blank' rel='noopener'>Balas lewat WhatsApp</a>
+</section>
+
+<footer id="end"></footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
